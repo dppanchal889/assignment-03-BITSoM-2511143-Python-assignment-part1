@@ -1,3 +1,6 @@
+print()
+print()
+print()
 print("TASK 1 - Data Parsing & Profile Cleaning")
 print()
 
@@ -56,6 +59,7 @@ for student in raw_students:
         print("✗ Invalid name")
 
     print("================================")
+    print("================================")
 
 # Step 7: find roll number 103 and print name in uppercase and lowercase
 for student in cleaned_students:
@@ -63,11 +67,13 @@ for student in cleaned_students:
         print(student["name"].upper())
         print(student["name"].lower())
 
-# Task 1
-# clean the student data
-# fix name, roll number and marks
-# check if name is valid
-# print student details
+
+# clean the student data.
+# fix name, roll number and marks.
+# check if name is valid.
+# print student details.
+
+print("========================================")
 
 print()
 print()
@@ -172,15 +178,18 @@ new_average = new_total / len(marks)
 print("New subjects added:", count)
 print("Updated average:", round(new_average, 2))
 
-# Task 2
-# print subject, marks and grade
-# find total and average marks
-# find highest and lowest subject
-# add new subjects using while loop
+
+# print subject, marks and grade.
+# find total and average marks.
+# find highest and lowest subject.
+# add new subjects using while loop.
+
+print("========================================")
 
 # Task 3
 # class report
 
+print()
 print()
 print()
 print("TASK 3 - Class Performance Summary")
@@ -195,6 +204,7 @@ class_data = [
 ]
 
 print("Name | Average | Status")
+print("------------------------")
 print("------------------------")
 
 pass_count = 0
@@ -239,3 +249,68 @@ print("Passed:", pass_count)
 print("Failed:", fail_count)
 print("Topper:", top_name, "-", top_average)
 print("Class average:", class_avg)
+
+# find average and pass/fail.
+# print class report.
+# find pass count, fail count, topper and class average.
+
+print("========================================")
+
+# Task 4
+# string operations on essay
+
+print()
+print()
+print("TASK 4 - String Manipulation Utility")
+print()
+
+essay = "  python is a versatile language. it supports object oriented, functional, and procedural programming. python is widely used in data science and machine learning.  "
+
+# step 1
+clean_essay = essay.strip()
+print("Step 1:")
+print(clean_essay)
+print()
+
+print("____________________________________________________________________________________________________________________________________________________________________________")
+# step 2
+print("Step 2:")
+print(clean_essay.title())
+print()
+
+print("____________________________________________________________________________________________________________________________________________________________________________")
+# step 3
+count_python = clean_essay.count("python")
+print("Step 3:")
+print(count_python)
+print()
+
+print("____________________________________________________________________________________________________________________________________________________________________________")
+# step 4
+changed_essay = clean_essay.replace("python", "Python 🐍")
+print("Step 4:")
+print(changed_essay)
+print()
+
+print("____________________________________________________________________________________________________________________________________________________________________________")
+# step 5
+sentence_list = clean_essay.split(". ")
+print("Step 5:")
+print(sentence_list)
+print()
+
+print("____________________________________________________________________________________________________________________________________________________________________________")
+# step 6
+print("Step 6:")
+num = 1
+
+for sentence in sentence_list:
+    if sentence.endswith(".") == False:
+        sentence = sentence + "."
+    print(str(num) + ".", sentence)
+    num = num + 1
+
+ 
+# string work on essay
+# clean text and print each step
+print("========================================")
