@@ -177,3 +177,65 @@ print("Updated average:", round(new_average, 2))
 # find total and average marks
 # find highest and lowest subject
 # add new subjects using while loop
+
+# Task 3
+# class report
+
+print()
+print()
+print("TASK 3 - Class Performance Summary")
+print()
+
+class_data = [
+    ("Ayesha Sharma", [88, 72, 95, 60, 78]),
+    ("Rohit Verma", [55, 68, 49, 72, 61]),
+    ("Priya Nair", [91, 85, 88, 94, 79]),
+    ("Karan Mehta", [40, 55, 38, 62, 50]),
+    ("Sneha Pillai", [75, 80, 70, 68, 85])
+]
+
+print("Name | Average | Status")
+print("------------------------")
+
+pass_count = 0
+fail_count = 0
+
+top_name = ""
+top_average = 0
+
+sum_of_averages = 0
+
+for item in class_data:
+    name = item[0]
+    marks = item[1]
+
+    total = 0
+    for m in marks:
+        total = total + m
+
+    average = total / len(marks)
+    average = round(average, 2)
+
+    if average >= 60:
+        status = "Pass"
+        pass_count = pass_count + 1
+    else:
+        status = "Fail"
+        fail_count = fail_count + 1
+
+    print(name, "|", average, "|", status)
+
+    sum_of_averages = sum_of_averages + average
+
+    if average > top_average:
+        top_average = average
+        top_name = name
+
+class_avg = sum_of_averages / len(class_data)
+class_avg = round(class_avg, 2)
+
+print()
+print("Passed:", pass_count)
+print("Failed:", fail_count)
+print("Topper:", top_name, "-", top_average)
+print("Class average:", class_avg)
